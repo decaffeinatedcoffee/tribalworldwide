@@ -12,4 +12,7 @@ Other images > https://pixabay.com/pt/photos/rio-%c3%a1gua-tiet%c3%aa-s%c3%a3o-p
   
 **NOT FROM PIXABAY**    
  
- Bertioga images > http://www.bertioga.sp.gov.br/ecoturismo/  
+   
+ Bertioga images > http://www.bertioga.sp.gov.br/ecoturismo/    
+ Paper plane 1 > https://dribbble.com/shots/2675550-SVG-Flight-Loader  
+ Paper plane 2 > https://giphy.com/stickers/orbitz-trip-airplane-reward-5WfZuc1xpMfEdbmfqx?utm_source=iframe&utm_medium=embed&utm_campaign=Embeds&utm_term=&ref=fave  
