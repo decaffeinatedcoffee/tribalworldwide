@@ -11,5 +11,5 @@ Other images > https://pixabay.com/pt/photos/rio-%c3%a1gua-tiet%c3%aa-s%c3%a3o-p
   
   
 **NOT FROM PIXABAY**    
-  
-Imagens de Bertioga > http://www.bertioga.sp.gov.br/ecoturismo/  
+ 
+ Bertioga images > http://www.bertioga.sp.gov.br/ecoturismo/  
