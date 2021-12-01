@@ -1,0 +1,1 @@
+var value = '&APPID=6b0218c3cccdf03f80c085392d78a701&'  //Key para a API de clima (por favor não me roube abiguinho)

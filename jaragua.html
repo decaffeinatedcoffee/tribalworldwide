@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@200&display=swap" rel="stylesheet">
+    <title>Tribal WorldWide - Parque do Jaraguá</title>
+    <script src="assets/script.js"></script>
+</head>
+
+<style>
+
+
+body {
+    margin: 0;
+     height: 100%;
+      overflow: hidden;
+  background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)),  url("assets/jaragua.jpg");
+  background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+height: 100%; 
+overflow: hidden;
+background-repeat: no-repeat;
+}
+
+html{
+  height: 100%;
+}
+
+.destinoa{
+    display: block;
+
+}
+
+.indo{
+    display: none;
+    width: 300px;
+    height: 300px;
+   margin:0 auto;
+   margin-top: 10%;
+}
+
+
+@media screen and (max-width: 679px){ 
+
+    body{
+        overflow: scroll;
+-webkit-overflow-scrolling: touch;
+    }
+
+    .header {
+
+margin: 0px;
+padding: 0px;
+height: 5em;
+background-color: #8dc721a9;
+overflow: auto;
+}
+
+
+.optionsheader{
+margin-top: 1.5%;
+font-family: 'Open Sans', sans-serif;
+text-overflow: inherit;
+cursor: pointer;
+}
+
+.logo{
+block-size: 50px;
+position: absolute;
+margin-left: 5px;
+margin-top: 10px;
+}
+
+.optionsheaderli{
+  list-style-type: none;
+ color: white;
+ display: inline-block;
+  float: none; 
+  font-size: 14px;
+ margin-left: 13%;
+ margin-top: 4%;
+}
+
+.tituloa{
+    text-align: center;
+    color: white;
+    font-size: 17px;
+    font-family: 'M PLUS 2', sans-serif;
+}
+.infosa{
+    color: white;
+    text-align: center;
+    list-style-position: inside;
+    margin-right: 2%;
+    font-size: 13px;
+    margin-top: 3%;
+}
+
+.sobrea{
+    text-align: left; 
+    display:flex; 
+    flex-direction: column; 
+    align-items: center;
+    color: white;
+    font-size: 14px;
+    margin-top: -2%;
+    font-family: 'M PLUS 2', sans-serif;
+}
+
+.climaa{
+   display: block;
+    color: rgb(240, 255, 24);
+    font-size: 15px;
+     margin-top: 3%;
+     
+}
+
+.clima{
+   bottom:0;
+   width:100%;
+   height:106px;
+   backdrop-filter: blur(4px);
+   
+}
+.locala{
+    color: white;
+    font-size: 17px;
+    margin-top: -3%;
+    margin-left: 18%;
+    height: 0px;
+}
+.tempa{
+    color: white;
+    font-size: 22px;
+    margin-top: 5%;
+    margin-left: 20%;
+    height: 0px;
+}
+
+.cond{
+    color: white;
+    font-size: 15px;
+    margin-left: 20%;
+    margin-top: 6%;
+    height: 0px;
+}
+
+.hra{
+    border-left: 1px solid rgb(255, 255, 255);
+  height: 90px;
+  position: absolute;
+  left: 42%;
+  margin-left: -3px;
+  top: 0;
+}
+
+.gostou{
+    color: rgb(255, 255, 255);
+    font-size: 10px;
+    text-align: right;
+    margin-right: 5%;
+    margin-top: -23%;
+    
+}
+.localsaida{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    margin-left: 58%;
+    font-size: 10px;
+    margin-top: -10%;
+    color: rgb(227, 252, 85);
+    height: 50px;
+    width: 100px;
+    text-overflow: ellipsis;
+
+}
+
+input::placeholder{
+  color: rgb(247, 247, 247);
+}
+
+.viajar{
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border: 1px solid yellow;
+    width: 50px;
+    height: 20px;
+    margin-left: 60%;
+}
+.encontrados{
+font-size: 15px;
+}
+}
+
+@media screen and (min-width: 680px){ 
+    .header {
+
+margin: 0px;
+padding: 0px;
+height: 6em;
+background-color: #8dc721a9;
+overflow: auto;
+}
+
+
+.optionsheader{
+margin-top: 3.5%;
+font-family: 'Open Sans', sans-serif;
+text-overflow: inherit;
+cursor: pointer;
+}
+
+.optionsheaderli{
+  list-style-type: none;
+ color: white;
+ display: inline-block;
+  float: none; 
+  font-size: 15px;
+ margin-left: 10%;
+}
+.tituloa{
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-family: 'M PLUS 2', sans-serif;
+}
+.infosa{
+    color: white;
+    text-align: end;
+    list-style-position: inside;
+    margin-right: 2%;
+    font-size: 15px;
+    margin-top: 4%;
+}
+
+.logo{
+block-size: 80px;
+position: absolute;
+margin-left: 5px;
+margin-top: 10px;
+} 
+
+.sobrea{
+    text-align: left; 
+    display:flex; 
+    flex-direction: column; 
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    margin-top: -8%;
+    font-family: 'M PLUS 2', sans-serif;
+}
+
+.climaa{
+   display: block;
+    color: rgb(240, 255, 24);
+    font-size: 20px;
+     margin-top: 3%;
+}
+
+.clima{
+   bottom:0;
+   width:100%;
+   height:106px;
+   backdrop-filter: blur(4px);
+}
+.locala{
+    color: white;
+    font-size: 20px;
+    margin-top: -3%;
+    margin-left: 18%;
+    height: 0px;
+}
+.tempa{
+    color: white;
+    font-size: 25px;
+    margin-top: 2%;
+    margin-left: 20%;
+    height: 0px;
+}
+
+.cond{
+    color: white;
+    font-size: 18px;
+    margin-left: 19.5%;
+    margin-top: 3%;
+    height: 12px;
+}
+
+.hra{
+    border-left: 1px solid rgb(255, 255, 255);
+  height: 90px;
+  position: absolute;
+  left: 37%;
+  margin-left: -3px;
+  top: 0;
+}
+
+.gostou{
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    text-align: right;
+    margin-right: 14%;
+    margin-top: -13%;
+}
+.localsaida{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    margin-left: 52%;
+    font-size: 17px;
+    color: rgb(227, 252, 85);
+    height: 50px;
+    width: 200px;
+
+}
+
+input::placeholder{
+  color: rgb(247, 247, 247);
+}
+
+.viajar{
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border: 1px solid yellow;
+    width: 60px;
+    height: 50px;
+}
+}
+@media (min-width: 1000px){
+    .header {
+
+margin: 0px;
+padding: 0px;
+height: 8em;
+background-color: #8dc721a9;
+overflow: auto;
+}
+
+
+.optionsheader{
+margin-top: 2.5%;
+font-family: 'Open Sans', sans-serif;
+text-overflow: inherit;
+cursor: pointer;
+}
+
+.optionsheaderli{
+  list-style-type: none;
+ color: white;
+ display: inline-block;
+  float: none; 
+  font-size: 20px;
+ margin-left: 13%;
+}
+.logo{
+block-size: 100px;
+position: absolute;
+margin-left: 40px;
+margin-top: 10px;
+}
+.tituloa{
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    font-family: 'M PLUS 2', sans-serif;
+}
+.infosa{
+    color: white;
+    text-align: end;
+    list-style-position: inside;
+    margin-right: 2%;
+    font-size: 18px;
+    margin-top: 4%;
+}
+
+.sobrea{
+    text-align: left; 
+    display:flex; 
+    flex-direction: column; 
+    align-items: center;
+    color: white;
+    font-size: 25px;
+    margin-top: -4%;
+    font-family: 'M PLUS 2', sans-serif;
+}
+
+.climaa{
+   display: block;
+    color: rgb(240, 255, 24);
+    font-size: 30px;
+     margin-top: 3%;
+}
+
+.clima{
+   bottom:0;
+   width:100%;
+   height:240px;
+   backdrop-filter: blur(4px);
+}
+.locala{
+    color: white;
+    font-size: 30px;
+    margin-top: 2%;
+    margin-left: 23%;
+    height: 10px;
+}
+
+.cond{
+    color: white;
+    font-size: 22px;
+    margin-left: 24%;
+    margin-top: 2%;
+    height: 12px;
+}
+.tempa{
+    color: white;
+    font-size: 35px;
+    margin-top: 2%;
+    margin-left: 24%;
+}
+
+.hra{
+    border-left: 1px solid rgb(255, 255, 255);
+  height: 230px;
+  position: absolute;
+  left: 37%;
+  margin-left: -3px;
+  top: 0;
+}
+
+.gostou{
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    text-align: right;
+    margin-right: 10%;
+    margin-top: -10%;
+}
+.localsaida{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    margin-left: 65%;
+    font-size: 20px;
+    color: rgb(227, 252, 85);
+    height: 60px;
+    width: 200px;
+
+}
+
+input::placeholder{
+  color: rgb(247, 247, 247);
+}
+
+.viajar{
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border: 1px solid yellow;
+    width: 70px;
+    height: 60px;
+}}
+
+.saindo{
+    text-align: center;
+    font-size: 20px;
+   color: rgb(54, 54, 54);  
+}
+
+.encontrados{
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    font-family: 'M PLUS 2', sans-serif;
+}
+
+.container{
+    padding: 20px;
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+.opt1{
+    font-size: 20px;
+    color: rgb(60, 255, 0);
+    width: 200px;
+    height: 300px;
+    border: 1px solid black;
+    background-color: white;
+    float: left;
+
+}
+
+.opt2{
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    width: 200px;
+    height: 300px;
+    border: 1px solid black;
+    background-color: white;
+    float: left;
+    margin-left: 4%;
+}
+
+.opt3{
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    width: 200px;
+    height: 300px;
+    border: 1px solid black;
+    background-color: white;
+    float: left;
+    margin-left: 4%;
+}
+
+.escolher{
+    background-color: rgb(83, 255, 83);
+    border: none;
+
+}
+.continuidade{
+    display: none;
+}
+
+.eba{
+    font-size: 20px;
+    font-family: 'M PLUS 2', sans-serif;
+    color: black;
+    text-align: center;
+
+}
+
+.finalizar{
+    display: none;
+}
+</style>
+    
+
+<div class="header">
+    <a href="index.html">
+        <img src="assets/logo.png" alt="logo" class="logo">
+    </a>
+<ul class="optionsheader">
+    <li class="optionsheaderli" onclick="location.replace('about.html')">Sobre nós</li>
+<li class="optionsheaderli" style="color: yellow;" onclick="location.replace('index.html')">Pacotes de viagem</li>
+<li class="optionsheaderli" onclick="location.replace('info.html')">Informações úteis</li>
+<li class="optionsheaderli" onclick="location.replace('support.html')">Suporte on-line</li>
+</ul>
+
+
+</div>
+
+
+<div class="destinoa" id="destinoa">
+
+<p class="tituloa">Ecoturismo no Parque Estadual do Jaraguá em São Paulo</p>
+
+<ul class="infosa">
+
+
+<li>Ideal para a familia</li>
+<li>Possui Playground</li>
+<br>
+<li>Bom para os esportes:</li>
+<li>Ciclismo</li>
+<li>Rapel</li>
+<li>Escalada</li>
+
+</ul>
+
+<p class="sobrea">Sendo localizado na zona norte da capital paulista <br> o parque abriga últimos grandes remanescentes de mata Atlântica. <br> O parque foi fundado em 1961 e possui montanhas de mais de 1.100 metros <br> de altitude, além disso, possui três trilhas, onde é possivel observar as especies nativas <br> da fauna e flora.</p>
+
+<div class="clima">
+
+  <p class="climaa">Clima agora:</p>
+  
+   <p class="locala">São Paulo</p>
+   <p class="cond" id="cond"></p>
+   <p class="tempa" id="temps"></p>
+   
+   <hr class="hra">
+
+   <div class="fechar">
+
+    <p class="gostou">Gostou? Que tal ver os pacotes disponiveis?</p>
+     <input type="text" placeholder="De onde vai sair?" class="localsaida" id="local">
+     <button class="viajar" onclick="embarcar()">Viajar!</button>
+
+</div>
+</div>
+
+
+
+</div>
+
+
+
+
+
+<img src="assets/indo.gif" alt="aviao" class="indo" id="indo">
+
+
+<div class="continuidade" id="continuidade">
+
+<p class="encontrados" id="encontrados"></p>
+<div class="container">
+<div class="opt1">
+<p style="color: black;">•Transporte terrestre</p>
+<p>R$ 120,90</p>
+<button class="escolher" onclick="escolhido(120.90)">Escolher</button>
+</div>
+<div class="opt2">
+<p>•Transporte terreste <br> •Seguro refeição</p>
+<p>R$ 230,90</p>
+<button class="escolher" onclick="escolhido(230.90)">Escolher</button>
+</div>
+<div class="opt3">
+<p>•Transporte terreste <br> •Seguro refeição <br> •Guia turistico</p>
+<p>R$ 280,56</p>
+<button class="escolher" onclick="escolhido(280.56)">Escolher</button>
+</div>
+</div>
+</div>
+
+<div class="finalizar" id="finalizar">
+
+<p class="eba">Eba, vamos finalizar seu pedido</p>
+
+<select name="" id="quantidade" style="display: block; margin:0 auto;" onchange="contas()">
+
+    <option value="1">1 pessoa</option>
+    <option value="2">2 pessoas</option>
+    <option value="3">3 pessoas</option>
+    <option value="4">4 pessoas</option>
+    <option value="5">5 pessoas</option>
+
+</select>
+
+<p class="valortotal" id="valortotal" style="text-align: center; color: black; font-size: 23px;">Valor total</p>
+
+</div>
+
+
+</body>
+<script>
+
+var valorgeral = 0;
+
+fetch("https://api.openweathermap.org/data/2.5/forecast?q=Sao+Paulo,br&lang=PT_BR"+ value + "mode=json&units=metric&cnt=1")
+    .then(function (respostaclima) {
+      return respostaclima.json();
+    })
+    .then(function (obtendoclima) {
+        var verificador = obtendoclima.message;
+      if(verificador == "city not found"){ 
+      var condicao = "ERRO"
+  }
+  else{
+    var condicao = obtendoclima.list[0].main.temp
+    var ceu = obtendoclima.list[0].weather[0].description
+   
+  }
+  document.getElementById("temps").innerHTML = Math.round(condicao) + " °C"
+  document.getElementById("cond").innerHTML = ceu
+    });
+
+    var cidade;
+
+function embarcar() {
+
+cidade = document.getElementById("local").value;
+if(cidade != ""){
+
+
+document.getElementById("destinoa").style.display = "none";
+document.body.style.background = "none"
+document.body.style.backgroundColor = "#f7f3e9";
+document.getElementById("indo").style.display = "block"
+setTimeout(proximo, 2000);
+
+
+}
+
+}
+
+function proximo() {
+    document.getElementById("indo").style.display = "none"
+    document.getElementById("encontrados").innerHTML = "Foram encontrados 3 pacotes a partir de R$ 120,90 com saida em " + cidade
+    document.getElementById("continuidade").style.display = "block"
+}
+
+
+function escolhido(valor){
+
+document.getElementById("continuidade").style.display = "none"
+document.getElementById("finalizar").style.display = "block"
+valorgeral = valor;
+document.getElementById("valortotal").innerHTML = "Valor total: R$ " + valorgeral
+}
+
+
+function contas() {
+var pessoas = document.getElementById('quantidade').value;
+
+ var valortotal = parseFloat(valorgeral) * pessoas  
+ document.getElementById("valortotal").innerHTML = "Valor total: R$ " +  valortotal.toFixed(2)
+
+}
+</script>
+</html>

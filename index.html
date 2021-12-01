@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@200&display=swap" rel="stylesheet">
+    <title>Tribal WorldWide</title>
+</head>
+
+<style>
+
+
+body {
+    margin: 0;
+     height: 100%;
+      overflow: hidden;
+  background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)),  url("assets/imagemmain.jpg");
+  background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+height: 100%; 
+overflow: hidden;
+background-repeat: no-repeat;
+}
+
+html{
+  height: 100%;
+width: 100%;
+}
+
+
+@media screen and (max-width: 679px){ 
+
+.header {
+
+margin: 0px;
+padding: 0px;
+height: 5em;
+background-color: #8dc721a9;
+overflow: auto;
+}
+
+
+.optionsheader{
+margin-top: 1.5%;
+font-family: 'Open Sans', sans-serif;
+text-overflow: inherit;
+cursor: pointer;
+}
+
+.optionsheaderli{
+  list-style-type: none;
+ color: white;
+ display: inline-block;
+  float: none; 
+  font-size: 14px;
+ margin-left: 13%;
+ margin-top: 4%;
+}
+
+.destinos{
+    
+    display: block;
+    margin: 0 auto;
+    top: 30%;
+    left: 30%;
+    height: 80px;
+    background-color: transparent;
+    border: none;
+    margin-top: 5%;
+    outline: none;
+    font-size: 10px;
+    cursor: pointer;
+   text-overflow: ellipsis;
+   width: 200px;
+}
+
+.opcao{
+    background-color: #6fa2ffe8;
+   
+}
+
+.auto{
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.button{
+    display: block;
+    margin: 0 auto;
+    background-color:transparent;
+    border: 1px solid rgb(222, 255, 34);
+    width: 90px;
+    height: 50px;
+    margin-top: 2%;
+    cursor: pointer;
+}
+
+.logo{
+block-size: 50px;
+position: absolute;
+margin-left: 5px;
+margin-top: 10px;
+}
+
+}
+
+
+@media screen and (min-width: 680px){ 
+    .header {
+
+margin: 0px;
+padding: 0px;
+height: 6em;
+background-color: #8dc721a9;
+overflow: auto;
+}
+
+
+.optionsheader{
+margin-top: 3.5%;
+font-family: 'Open Sans', sans-serif;
+text-overflow: inherit;
+cursor: pointer;
+}
+
+.optionsheaderli{
+  list-style-type: none;
+ color: white;
+ display: inline-block;
+  float: none; 
+  font-size: 15px;
+ margin-left: 10%;
+}
+.destinos{
+    
+    display: block;
+    margin: 0 auto;
+    top: 30%;
+    left: 30%;
+    height: 80px;
+    background-color: transparent;
+    border: none;
+    margin-top: 5%;
+    outline: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.opcao{
+    background-color: #6fa2ffe8;
+   
+}
+
+.auto{
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.button{
+    display: block;
+    margin: 0 auto;
+    background-color:transparent;
+    border: 1px solid rgb(222, 255, 34);
+    width: 90px;
+    height: 50px;
+    margin-top: 2%;
+    cursor: pointer;
+}
+
+.logo{
+block-size: 80px;
+position: absolute;
+margin-left: 5px;
+margin-top: 10px;
+}
+
+}
+
+@media (min-width: 1000px){
+    .header {
+
+margin: 0px;
+padding: 0px;
+height: 8em;
+background-color: #8dc721a9;
+overflow: auto;
+}
+
+
+.optionsheader{
+margin-top: 2.5%;
+font-family: 'Open Sans', sans-serif;
+text-overflow: inherit;
+cursor: pointer;
+}
+
+.optionsheaderli{
+  list-style-type: none;
+ color: white;
+ display: inline-block;
+  float: none; 
+  font-size: 20px;
+ margin-left: 13%;
+}
+.logo{
+block-size: 100px;
+position: absolute;
+margin-left: 40px;
+margin-top: 10px;
+}
+.destinos{
+    
+    display: block;
+    margin: 0 auto;
+    top: 30%;
+    left: 30%;
+    height: 80px;
+    background-color: transparent;
+    border: none;
+    margin-top: 5%;
+    outline: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.opcao{
+    background-color: #6fa2ffe8;
+   
+}
+
+.auto{
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.button{
+    display: block;
+    margin: 0 auto;
+    background-color:transparent;
+    border: 1px solid rgb(222, 255, 34);
+    width: 90px;
+    height: 50px;
+    margin-top: 2%;
+    cursor: pointer;
+}
+
+}
+
+
+</style>
+   
+<body>
+    
+<div class="header">
+    <a href="index.html">
+        <img src="assets/logo.png" alt="logo" class="logo">
+    </a>
+<ul class="optionsheader">
+    <li class="optionsheaderli" onclick="location.replace('about.html')">Sobre nós</li>
+<li class="optionsheaderli" style="color: yellow;">Pacotes de viagem</li>
+<li class="optionsheaderli" onclick="location.replace('info.html')">Informações úteis</li>
+<li class="optionsheaderli" onclick="location.replace('support.html')">Suporte on-line</li>
+</ul>
+
+
+</div>
+
+
+<div class="selecao">
+
+<select name="destinos" id="destinos" class="destinos">
+<option value="1" class="opcao">Selecione o Destino</option>
+<option value="2" class="opcao">ECOTURISMO: Parque Estadual do Jaraguá, São Paulo</option>
+<option value="3" class="opcao">ECOTURISMO: Parque Estadual Campos do Jordão, Campos do Jordão, São Paulo</option>
+<option value="4" class="opcao">TRILHA: Trilha do Guaratuba, Bertioga. São Paulo</option>
+</select>
+
+<p  class="auto">Ou deixe-nos <a href="melhor.html" class="auto">escolher o melhor destino</a></p>
+
+
+<button class="button" onclick="embarcar()">Embarcar!</button>
+</div>
+
+
+</body>
+<script>
+
+function embarcar() {
+
+if(document.getElementById("destinos").value == 2){
+    location.replace("jaragua.html")
+}else if(document.getElementById("destinos").value == 3){
+    location.replace("campos.html")
+}else if(document.getElementById("destinos").value == 4){
+    location.replace("bertioga.html")
+}
+
+
+
+
+
+
+}
+
+
+
+</script>
+</html>

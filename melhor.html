@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@200&display=swap" rel="stylesheet">
+    <title>Escolhendo o melhor destino</title>
+</head>
+
+<style>
+
+
+body {
+    margin: 0;
+     height: 100%;
+      overflow: hidden;
+  background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)),  url("assets/image3.jpg");
+  background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+height: 100%; 
+overflow: hidden;
+background-repeat: no-repeat;
+}
+
+html{
+  height: 100%;
+width: 100%;
+}
+
+
+@media screen and (max-width: 679px){ 
+
+    .header {
+
+margin: 0px;
+padding: 0px;
+height: 5em;
+background-color: #8dc721a9;
+overflow: auto;
+}
+
+
+.optionsheader{
+margin-top: 1.5%;
+font-family: 'Open Sans', sans-serif;
+text-overflow: inherit;
+cursor: pointer;
+}
+
+.optionsheaderli{
+  list-style-type: none;
+ color: white;
+ display: inline-block;
+  float: none; 
+  font-size: 14px;
+ margin-left: 13%;
+ margin-top: 4%;
+}
+
+.logo{
+block-size: 50px;
+position: absolute;
+margin-left: 5px;
+margin-top: 10px;
+}
+
+.result{
+    display: none;
+    backdrop-filter: blur(4px);
+    height: 270px;
+    width: 230px;
+    margin: 0 auto;
+    margin-top: 4%;
+}
+
+}
+
+
+@media screen and (min-width: 680px){ 
+    .header {
+
+margin: 0px;
+padding: 0px;
+height: 6em;
+background-color: #8dc721a9;
+overflow: auto;
+}
+
+
+.optionsheader{
+margin-top: 3.5%;
+font-family: 'Open Sans', sans-serif;
+text-overflow: inherit;
+cursor: pointer;
+}
+
+.logo{
+block-size: 80px;
+position: absolute;
+margin-left: 5px;
+margin-top: 10px;
+}
+
+.optionsheaderli{
+  list-style-type: none;
+ color: white;
+ display: inline-block;
+  float: none; 
+  font-size: 15px;
+ margin-left: 10%;
+}
+
+.result{
+    display: none;
+    backdrop-filter: blur(4px);
+    height: 270px;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 4%;
+}
+
+}
+
+@media (min-width: 1000px){
+    .header {
+
+margin: 0px;
+padding: 0px;
+height: 8em;
+background-color: #8dc721a9;
+overflow: auto;
+}
+
+
+.optionsheader{
+margin-top: 2.5%;
+font-family: 'Open Sans', sans-serif;
+text-overflow: inherit;
+cursor: pointer;
+}
+
+.optionsheaderli{
+  list-style-type: none;
+ color: white;
+ display: inline-block;
+  float: none; 
+  font-size: 20px;
+ margin-left: 13%;
+}
+.logo{
+block-size: 100px;
+position: absolute;
+margin-left: 40px;
+margin-top: 10px;
+}
+
+.result{
+    display: none;
+    backdrop-filter: blur(4px);
+    height: 270px;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 4%;
+}
+
+}
+
+.titulo{
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    font-family: 'M PLUS 2', sans-serif;
+}
+
+.checkchild{
+    display: block;
+margin: 0 auto;
+width: 180px;
+margin-top: 5%;
+background-color: transparent;
+outline: none;
+border: none;
+color: white;
+}
+
+.checksport{
+display: block;
+margin: 0 auto;
+width: 180px;
+margin-top: 3%;
+background-color: transparent;
+outline: none;
+border: none;
+color: white;
+}
+
+.find{
+    display: block;
+    margin: 0 auto;
+    background-color:transparent;
+    border: 1px solid rgb(222, 255, 34);
+    width: 90px;
+    height: 50px;
+    margin-top: 2%;
+    cursor: pointer;
+    color: white;
+}
+
+.titleres{
+    font-size: 22px;
+    color: white;
+    font-family: 'M PLUS 2', sans-serif;
+text-align: center;
+margin-top: 5%;
+}
+.first{
+display: inline-block;
+color: white;
+font-size: 19px;
+font-family: 'M PLUS 2', sans-serif;
+text-align: center;
+margin-top: 2%;
+}
+
+.second{
+display: inline-block;
+color: white;
+font-size: 19px;
+font-family: 'M PLUS 2', sans-serif;
+text-align: center;
+margin-top: 2%;
+}
+
+.third{
+display: inline-block;
+color: white;
+font-size: 19px;
+font-family: 'M PLUS 2', sans-serif;
+text-align: center;
+margin-top: 2%;
+}
+
+</style>
+    
+
+<div class="header">
+    <a href="index.html">
+        <img src="assets/logo.png" alt="logo" class="logo">
+    </a>
+    <ul class="optionsheader">
+        <li class="optionsheaderli" onclick="location.replace('about.html')">Sobre nós</li>
+    <li class="optionsheaderli" style="color: yellow;">Pacotes de viagem</li>
+    <li class="optionsheaderli" onclick="location.replace('info.html')">Informações úteis</li>
+    <li class="optionsheaderli" onclick="location.replace('support.html')">Suporte on-line</li>
+    </ul>
+
+</div>
+
+<p class="titulo">Vou te ajudar a escolher o melhor destino!</p>
+
+
+<select name="destinos" id="child" class='checkchild'>
+    <option value="1" class="opcao">Ideal para crianças: Não</option>
+    <option value="2" class="opcao">Ideal para crianças: Sim</option>
+    </select> 
+
+    <select name="destinos" id="sport" class='checksport'>
+        <option value="1" class="opcao">Esportes: TODOS</option>
+        <option value="2" class="opcao">Esportes: Ciclismo</option>
+        <option value="3" class="opcao">Esportes: Rapel</option>
+        <option value="4" class="opcao">Esportes: Escalada</option>
+        <option value="5" class="opcao">Esportes: Arvorismo</option>
+        <option value="6" class="opcao">Esportes: Tirolesa</option>
+        </select> 
+
+        <button class="find" onclick="encontrar()">Encontrar</button>
+
+        <div class="result" id="result">
+            <p class="titleres">Destinos encontrados</p>
+    <a class="first" id="first"></a>
+    <a class="second" id="second"></a>
+    <a class="third" id="third"></a>
+</div>
+</body>
+<script>
+
+function encontrar() {
+
+var child = document.getElementById("child").value;
+var sport = document.getElementById("sport").value;
+
+if(child == 1){
+
+if(sport == 1){
+var destino = "todos";
+
+} else if(sport == 2){
+var destino = "bertioga.jaragua"
+} else if(sport == 3){
+var destino = "jaragua"
+}else if(sport == 4){
+var destino = "jaragua"
+}else if(sport == 5){
+var destino = "campos"
+}else if(sport == 6){
+var destino = "campos"
+}
+
+}
+else if(child == 2){
+
+    if(sport == 1){
+var destino = "todos";
+
+} else if(sport == 2){
+var destino = "jaragua"
+} else if(sport == 3){
+var destino = "jaragua"
+}else if(sport == 4){
+var destino = "jaragua"
+}else if(sport == 5){
+var destino = "campos"
+}else if(sport == 6){
+var destino = "campos"
+}
+
+}
+
+document.getElementById('first').innerHTML = "";
+document.getElementById('second').innerHTML = "";
+document.getElementById('third').innerHTML = "";
+document.getElementById('first').href = ""
+document.getElementById('second').href = ""
+document.getElementById('third').href = ""
+document.getElementById("result").style.display = "block"
+
+if(destino == 'todos' && child == 1){
+document.getElementById('first').innerHTML = "Parque estadual do Jaraguá";
+document.getElementById('second').innerHTML = "Parque estadual Campos do Jordão";
+document.getElementById('third').innerHTML = "Trilha do Guaratuba, Bertioga";
+document.getElementById('first').href = "jaragua.html"
+document.getElementById('second').href = "campos.html"
+document.getElementById('third').href = "bertioga.html"
+
+}else if(destino == 'todos' && child == 2){
+document.getElementById('first').innerHTML = "Parque estadual do Jaraguá";
+document.getElementById('second').innerHTML = "Parque estadual Campos do Jordão";
+document.getElementById('third').innerHTML = "";
+document.getElementById('first').href = "jaragua.html"
+document.getElementById('second').href = "campos.html"
+document.getElementById('third').href = ""
+
+}else if(destino == 'bertioga.jaragua'){
+document.getElementById('first').innerHTML = "Parque estadual do Jaraguá";
+document.getElementById('second').innerHTML = "Trilha do Guaratuba, Bertioga";
+document.getElementById('third').innerHTML = "";
+document.getElementById('first').href = "jaragua.html"
+document.getElementById('second').href = "bertioga.html"
+document.getElementById('third').href = ""
+}else if(destino == 'jaragua'){
+document.getElementById('first').innerHTML = "Parque estadual do Jaraguá";
+document.getElementById('second').innerHTML = "";
+document.getElementById('third').innerHTML = "";
+document.getElementById('first').href = "jaragua.html"
+document.getElementById('second').href = ""
+document.getElementById('third').href = ""
+}else if(destino == 'campos'){
+document.getElementById('first').innerHTML = "Parque estadual Campos do Jordão";
+document.getElementById('second').innerHTML = "";
+document.getElementById('third').innerHTML = "";
+document.getElementById('first').href = "campos.html"
+document.getElementById('second').href = ""
+document.getElementById('third').href = ""
+
+}
+
+
+
+
+}
+
+</script>
+</html>
