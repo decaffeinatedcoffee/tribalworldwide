@@ -251,7 +251,18 @@ margin-top: 10px;
 
 }
 
-
+.restante{
+    display: block;
+    color: rgb(255, 255, 255);
+   text-overflow: inherit;
+   font-size: 18px;
+}
+.counter{
+    position: fixed;     
+       text-align: center;    
+       bottom: 0px; 
+       width: 100%;
+}
 </style>
    
 <body>
@@ -286,10 +297,12 @@ margin-top: 10px;
 <button class="button" onclick="embarcar()">Embarcar!</button>
 </div>
 
-
+<div class="counter">
+<p class="restante" id="restante"></p>
+</div>
 </body>
 <script>
-
+ countdown();
 function embarcar() {
 
 if(document.getElementById("destinos").value == 2){
@@ -302,10 +315,24 @@ if(document.getElementById("destinos").value == 2){
 
 
 
-
-
-
 }
+
+
+function countdown() {
+let data = new Date();
+data.toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' });
+var atual = new Date().getTime();
+var end = new Date('Dec 25, 2021 00:00:00').getTime();
+var restante = end - atual;
+var dias = Math.floor(restante / (1000 * 60 * 60 * 24));
+var horas = Math.floor((restante % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+var minutos = Math.floor((restante % (1000 * 60 * 60)) / (1000 * 60));
+var segundos = Math.floor((restante % (1000 * 60)) / 1000);
+document.getElementById("restante").innerHTML = "Restam " + dias + " dias " +  horas + " horas " + minutos + " minutos e " + segundos + " segundos até a página ser removida (ou até o natal)"
+setTimeout(countdown, 1000);
+}
+
+
 
 
 
