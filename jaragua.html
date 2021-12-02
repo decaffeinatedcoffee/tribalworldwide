@@ -542,7 +542,14 @@ text-align: center;
 .finalizar{
     display: none;
 }
-</style>
+
+
+.cupom{
+  display: block;
+  margin: 0 auto;
+  color: black;
+  margin-top: 2%;
+}</style>
     
 
 <div class="header">
@@ -644,7 +651,7 @@ text-align: center;
     <option value="5">5 pessoas</option>
 
 </select>
-
+   <input onchange="contas()" type="text" name="" id='cupom' placeholder="Insira seu cupom" class="cupom"/>
 <p class="valortotal" id="valortotal" style="text-align: center; color: black; font-size: 23px;">Valor total</p>
 
 </div>
@@ -709,10 +716,26 @@ document.getElementById("valortotal").innerHTML = "Valor total: R$ " + valorgera
 
 
 function contas() {
-var pessoas = document.getElementById('quantidade').value;
 
- var valortotal = parseFloat(valorgeral) * pessoas  
- document.getElementById("valortotal").innerHTML = "Valor total: R$ " +  valortotal.toFixed(2)
+  var desconto = 0;
+  var pessoas = document.getElementById('quantidade').value;
+  var cupom = document.getElementById("cupom").value.toLowerCase()
+  if(cupom == ""){
+    desconto = 0
+    var valortotal = parseFloat(valorgeral) * pessoas  
+
+ document.getElementById("valortotal").innerHTML = "Valor total: R$ " +  (valortotal - desconto).toFixed(2)
+  }else if(cupom == "tribal10"){
+    desconto = 10
+var valortotal = parseFloat(valorgeral) * pessoas  
+ document.getElementById("valortotal").innerHTML = "Valor total: R$ " +  (valortotal - desconto).toFixed(2)
+
+  }else{
+    desconto = 0
+    document.getElementById("valortotal").innerHTML = "Cupom inválido!"
+  }
+
+
 
 }
 </script>
