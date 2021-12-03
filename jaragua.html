@@ -692,7 +692,8 @@ function embarcar() {
 cidade = document.getElementById("local").value;
 if(cidade != ""){
 
-
+document.getElementById("gostou").style.color = "white"
+document.getElementById("gostou").innerHTML = "Gostou? Que tal ver os pacotes disponiveis?"
 document.getElementById("destinoa").style.display = "none";
 document.body.style.background = "none"
 document.body.style.backgroundColor = "#f7f3e9";
@@ -700,6 +701,10 @@ document.getElementById("indo").style.display = "block"
 setTimeout(proximo, 2000);
 
 
+}
+else{
+    document.getElementById("gostou").innerHTML = "Por favor insira o local de saida"
+    document.getElementById("gostou").style.color = "red"
 }
 
 }
