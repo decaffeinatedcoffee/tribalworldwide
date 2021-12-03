@@ -554,7 +554,14 @@ text-align: center;
 }
 #cupom::placeholder{
   color: black;
-}</style>
+}
+.infocupom{
+    text-align: center;
+    color: black;
+    font-size: 18px;
+    height: 0px;
+}
+</style>
     
 
 <div class="header">
@@ -603,8 +610,8 @@ text-align: center;
 
    <div class="fechar">
 
-   <p class="gostou" id="gostou" >Gostou? Que tal ver os pacotes disponiveis?</p>
-     <input type="text" placeholder="De onde vai sair?" class="localsaida" id="local">
+    <p class="gostou" id="gostou" >Gostou? Que tal ver os pacotes disponiveis?</p>
+     <input type="text" placeholder="De onde vai sair?" class="localsaida" id="local" autocomplete="off">
      <button class="viajar" onclick="embarcar()">Viajar!</button>
 
 </div>
@@ -656,6 +663,7 @@ text-align: center;
     <option value="5">5 pessoas</option>
 
 </select>
+   <p class="infocupom" id="infocupom"></p>
    <input onchange="contas()" type="text" name="" id='cupom' placeholder="Insira seu cupom" class="cupom"/>
 <p class="valortotal" id="valortotal" style="text-align: center; color: black; font-size: 23px;">Valor total</p>
 
@@ -733,16 +741,16 @@ function contas() {
   if(cupom == ""){
     desconto = 0
     var valortotal = parseFloat(valorgeral) * pessoas  
-
+    document.getElementById("infocupom").innerHTML = ""
  document.getElementById("valortotal").innerHTML = "Valor total: R$ " +  (valortotal - desconto).toFixed(2)
   }else if(cupom == "tribal10"){
     desconto = 10
 var valortotal = parseFloat(valorgeral) * pessoas  
  document.getElementById("valortotal").innerHTML = "Valor total: R$ " +  (valortotal - desconto).toFixed(2)
-
+ document.getElementById("infocupom").innerHTML = "Cupom aplicado!"
   }else{
     desconto = 0
-    document.getElementById("valortotal").innerHTML = "Cupom inválido!"
+    document.getElementById("infocupom").innerHTML = "Cupom inválido!"
   }
 
 
