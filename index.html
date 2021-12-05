@@ -16,7 +16,14 @@
 
 <style>
 
-
+#mensagemfinal{
+    display: none;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    margin-top: 10%;
+}
 body {
     margin: 0;
      height: 100%;
@@ -269,10 +276,38 @@ margin-top: 10px;
        bottom: 0px; 
        width: 100%;
 }
+
+#paginainteira{
+    display: block;
+}
+.logogithub{
+    display: block;
+    margin:0 auto;
+    height: 0px;
+    block-size: 40px;
+}
+
+.container{
+      display: inline-block;
+      margin-top: 2%;
+    }
+    .typed{
+      overflow: hidden;
+      border-right: .15em solid rgb(255, 255, 255);
+      white-space: nowrap;
+      animation: 
+      typing 1s steps(20, end) forwards;
+      font-size: 18px;
+      width: 0;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
 </style>
    
 <body>
-    
+    <div id="paginainteira">
 <div class="header">
     <a href="index.html">
         <img src="assets/logo.png" alt="logo" class="logo">
@@ -306,8 +341,22 @@ margin-top: 10px;
 <div class="counter">
 <p class="restante" id="restante"></p>
 </div>
+</div>
+
+
+<div id="mensagemfinal"> <p>Obrigado por participar do projeto <br> infelizmente a página não está mais disponivel <br> <p style="font-size:40px; ">💜</p></p>
+<p>Página desenvolvida por <a style="color: white; height: 0px;" href="https://github.com/decaffeinatedcoffee">decaffeinatedcoffee</a></p>
+<img src="assets/githublogo.png" alt="Logo Github" class="logogithub" onclick="location.replace('https://github.com/decaffeinatedcoffee')">
+
+<div class="container">
+    <div class="typed" id="typed">Never stop dreaming!</div>
+  </div>
+
+</div>
+
 </body>
 <script>
+
  countdown();
 function embarcar() {
 
@@ -334,11 +383,23 @@ var dias = Math.floor(restante / (1000 * 60 * 60 * 24));
 var horas = Math.floor((restante % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 var minutos = Math.floor((restante % (1000 * 60 * 60)) / (1000 * 60));
 var segundos = Math.floor((restante % (1000 * 60)) / 1000);
+if(dias <= 0 && horas <= 0 && minutos <= 0 && segundos <= 0){
+    document.getElementById("paginainteira").style.display = "none"
+    document.getElementById("mensagemfinal").style.display = "block"
+    setTimeout(repeat, 2000);   
+}
+else{
 document.getElementById("restante").innerHTML = "Restam " + dias + " dias " +  horas + " horas " + minutos + " minutos e " + segundos + " segundos até a página ser removida (ou até o natal)"
 setTimeout(countdown, 1000);
 }
-
- 
+}
+ function repeat() {
+var typer = document.getElementById('typed');
+typer.style.animation = 'none';
+typer.offsetHeight; /* trigger reflow */
+typer.style.animation = null; 
+typer.innerHTML = "You are stronger than you think!"
+ }
 
 </script>
 </html>
