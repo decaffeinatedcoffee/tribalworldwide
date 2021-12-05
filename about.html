@@ -174,24 +174,5 @@ font-family: 'M PLUS 2', sans-serif;
 <p class="texto">Tudo começou no dia 4 de novembro de 2021, quando na escola, na máteria de eletivas, a professora citou que teriamos que fazer um trabalho que ia ser definido na proxima semana. <br> Foi ai que a ideia de criar uma página surgiu entre 2 membros do grupo, porém o tema era incerto e tudo poderia ser apenas uma ideia. <br> O tempo passou e na outra semana a confirmação do tema veio, era certo, criar uma agência de turismo, foi ai que nosso grupo começou com o projeto, alguns desenhando o logo, outros criando paginas e digitalizando desenhos, e outros apenas vendo e rindo.  <br>  hoje, nossa agencia busca fornecer planos de viagens cada vez mais acessiveis.</p>
 
 </body>
-<script>
-countdown();
-function countdown() {
-let data = new Date();
-data.toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' });
-var atual = new Date().getTime();
-var end = new Date('Dec 25, 2021 00:00:00').getTime();
-var restante = end - atual;
-var dias = Math.floor(restante / (1000 * 60 * 60 * 24));
-var horas = Math.floor((restante % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-var minutos = Math.floor((restante % (1000 * 60 * 60)) / (1000 * 60));
-var segundos = Math.floor((restante % (1000 * 60)) / 1000);
-if(dias <= 0 && horas <= 0 && minutos <= 0 && segundos <= 0){
-    location.replace('https://tribalworldwide.vercel.app/') 
-}
-else{
-    setTimeout(countdown, 1000);
-}
-}
-</script>
+<script src="assets/scriptfinal.js"></script>
 </html>
